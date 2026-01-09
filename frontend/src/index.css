@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Yumuşak kaydırma özelliğini ekledik */
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-background: #020617;
+  --color-surface: #0f172a;
+  --color-primary: #CBCBE7;
+  --color-secondary: #a855f7;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-background);
+}
+
+.bg-refined-mesh {
+  background-color: var(--color-background);
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(168, 85, 247, 0.08) 0px, transparent 40%),
+    radial-gradient(at 90% 90%, rgba(203, 203, 231, 0.08) 0px, transparent 40%);
+}
+
+.glass-card {
+  @apply bg-white/[0.02] border border-white/[0.05] backdrop-blur-xl;
+}
